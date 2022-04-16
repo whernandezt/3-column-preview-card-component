@@ -1,0 +1,119 @@
+:root{
+    --lexen-deca: 'Lexend Deca',
+    sans-serif;
+    --big-shoulders-display:'Big Shoulders Display',
+    cursive;
+
+    --bright-orange: hsl(31, 77%, 52%); 
+    --dark-cyan: hsl(184, 100%, 22%); 
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white : hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+body{
+    margin: 0;
+    font-size: 15px;
+    font-family: var(--lexen-deca);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+    color: var(--transparent-white);
+    line-height: 24px;
+}
+
+h1{
+    font-family: var(--big-shoulders-display);
+    font-size: 32px;
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    box-sizing: border-box;
+    padding: 32px 0px 32px 0px;
+}
+
+.card{
+    padding: 40px;
+    height: 350px;
+}
+
+
+.card-bg-orange{
+    background-color: var(--bright-orange);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.card-bg-cyan {
+    background-color: var(--dark-cyan);
+}
+
+.card-bg-dark-cyan {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0px 0px 8px 8px;
+}
+
+
+.btn{
+    border-radius: 20px;
+    background-color: var(--very-light-gray);
+    padding: 8px 16px 8px 16px;
+    border: 0px;
+    font-size: 15px;
+    margin-top: 58px;
+}
+
+.btn:hover{
+    background: transparent;
+    color: var(--transparent-white);
+    border: 1px solid var(--transparent-white);
+    cursor: pointer;
+}
+
+.bnt-orange{
+    color: var(--bright-orange);
+}
+
+.bnt-cyan {
+    color: var(--dark-cyan);
+}
+
+.bnt-dark-cyan {
+    color: var(--very-dark-cyan);
+}
+
+@media (min-width: 870px) {
+    .card-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 870px;
+    }
+
+    .card-bg-orange {
+        border-radius: 8px 0px 0px 8px;
+    }
+    
+    .card-bg-dark-cyan {
+        border-radius: 0px 8px 8px 0px;
+    }
+
+}
